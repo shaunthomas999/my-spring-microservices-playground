@@ -10,11 +10,12 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>config-server</module>
-    <module>service-registry</module>
     <module>admin-server</module>
+    <module>config-server</module>
+    <module>greetings-producer</module>
     <module>greetings-service</module>
     <module>names-service</module>
+    <module>service-registry</module>
     <module>web-xp-service</module>
   </modules>
 </project>
