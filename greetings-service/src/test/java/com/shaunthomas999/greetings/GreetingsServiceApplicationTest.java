@@ -1,4 +1,4 @@
-package com.shaunthomas999.web;
+package com.shaunthomas999.greetings;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

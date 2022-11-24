@@ -1,4 +1,4 @@
-package com.shaunthomas999.web;
+package com.shaunthomas999.greetings;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
