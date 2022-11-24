@@ -2,3 +2,34 @@ server:
   port: 9051
 spring:
   application.name: greetings-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/greetings-db
+    username: greetings-db-user
+    password: greetings-pw
+#    continue-on-error: true
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 4
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    generate-ddl: false
+    hibernate.ddl-auto: create #none
+    properties:
+      hibernate.hbm2ddl.auto: create #none
+      hibernate.show_sql: true
+      hibernate.format_sql: true
+      hibernate.generate_statistics: false
+      hibernate.id.new_generator_mappings: true
+      hibernate.jdbc.time_zone: UTC
+      hibernate.jdbc.batch_size: 5
+      hibernate.jdbc.batch_versioned_data: true
+      hibernate.jdbc.lob.non_contextual_creation: true
+      hibernate.order_inserts: true
+      hibernate.order_updates: true
+      hibernate.enable_lazy_load_no_trans: true
+      hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      hibernate.implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      hibernate.default_schema: greetings
+    open-in-view: false
+
