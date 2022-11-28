@@ -20,8 +20,10 @@
     <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
     <project.reporting.outputEncoding>${project.encoding}</project.reporting.outputEncoding>
 
-    <spring-boot.version>2.7.5</spring-boot.version>
+    <spring-boot.version>2.7.6</spring-boot.version>
     <spring-cloud.version>2021.0.5</spring-cloud.version>
+
+    <datasource-proxy-spring-boot-starter.version>1.8.1</datasource-proxy-spring-boot-starter.version>
   </properties>
 
   <dependencyManagement>
@@ -55,6 +57,10 @@
       <scope>runtime</scope>
       <optional>true</optional>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-cache</artifactId>
+    </dependency>
 
     <!-- Database -->
     <dependency>
@@ -71,6 +77,13 @@
       <artifactId>h2</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- Development/Debugging only -->
+<!--    <dependency>-->
+<!--      <groupId>com.github.gavlyukovskiy</groupId>-->
+<!--      <artifactId>datasource-proxy-spring-boot-starter</artifactId>-->
+<!--      <version>${datasource-proxy-spring-boot-starter.version}</version>-->
+<!--      <optional>true</optional>-->
+<!--    </dependency>-->
 
     <!-- Test dependencies -->
     <dependency>
@@ -97,6 +110,12 @@
     <dependency>
       <groupId>org.hibernate.validator</groupId>
       <artifactId>hibernate-validator</artifactId>
+    </dependency>
+    <!-- TODO - Remove this after verification -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-properties-migrator</artifactId>
+      <scope>runtime</scope>
     </dependency>
 
   </dependencies>

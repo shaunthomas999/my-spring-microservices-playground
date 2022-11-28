@@ -1,3 +1,4 @@
+# https://vladmihalcea.com/spring-boot-application-properties/
 server:
   port: 9051
 spring:
@@ -15,6 +16,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 #    generate-ddl: false
     hibernate.ddl-auto: create #none
+#    show-sql: true - sets hibernate.show_sql: true
     properties:
       hibernate.hbm2ddl.auto: create #none
       hibernate.show_sql: true
@@ -32,4 +34,8 @@ spring:
       hibernate.implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
       hibernate.default_schema: greetings
     open-in-view: false
-
+#logging.level:
+#  org.hibernate: # advanced hibernate logging
+#    SQL: debug
+#    type.descriptor.sql: trace
+#  net.ttddyy.dsproxy.listener: debug

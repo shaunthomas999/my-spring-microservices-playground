@@ -1,4 +1,4 @@
-# my-spring-cloud-sample
+# my-spring-microservices-playground
 
 ## Setup
 
